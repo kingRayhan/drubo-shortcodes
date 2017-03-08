@@ -8,12 +8,26 @@
 
 
 
+/**
+ * TODO
+ * --------------------------------
+ * Our Service
+ * circular progressbar
+ * Team Member
+ * Pricing Table
+ * Pricing Table 2
+ * 
+ */
+
+
+
+
 define('DRUBO_SHORTCODE_CATEGORY', 'Drubo Shortcodes');
 define('DRUBO_SHORTCODE_TEXT_DOMAIN', 'drubo');
 
 require dirname(__FILE__) . '/shortcodes/drubo-section-title.php';
 require dirname(__FILE__) . '/shortcodes/drubo-counter-up.php';
-//require dirname(__FILE__) . '/shortcodes/drubo_our_service.php';
+//require dirname(__FILE__) . '/shortcodes/drubo_our_service.php'; // TODO
 require dirname(__FILE__) . '/shortcodes/drubo_our_service_two.php';
 require dirname(__FILE__) . '/shortcodes/drubo_we_works.php';
 require dirname(__FILE__) . '/shortcodes/drubo_speciality.php';
@@ -21,8 +35,11 @@ require dirname(__FILE__) . '/shortcodes/drubo_video.php';
 require dirname(__FILE__) . '/shortcodes/drubo_brand_slider.php';
 require dirname(__FILE__) . '/shortcodes/drubo_progressbar.php';
 //require dirname(__FILE__) . '/shortcodes/drubo_circular_progressbar.php'; // TODO
-require dirname(__FILE__) . '/shortcodes/drubo_testimonial.php'; // TODO
-require dirname(__FILE__) . '/shortcodes/drubo_testimonial_two.php'; // TODO
+require dirname(__FILE__) . '/shortcodes/drubo_testimonial.php';
+require dirname(__FILE__) . '/shortcodes/drubo_testimonial_two.php'; 
+require dirname(__FILE__) . '/shortcodes/drubo_team_member.php'; //todo
+require dirname(__FILE__) . '/shortcodes/drubo_slider.php'; //todo
+require dirname(__FILE__) . '/shortcodes/drubo_pricing_table.php'; //todo
 
 
 
@@ -37,5 +54,7 @@ add_action('wp_head',function(){
 </style>
 	<?php
 });
+
+
 
 
