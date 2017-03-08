@@ -22,6 +22,7 @@ require dirname(__FILE__) . '/shortcodes/drubo_brand_slider.php';
 require dirname(__FILE__) . '/shortcodes/drubo_progressbar.php';
 //require dirname(__FILE__) . '/shortcodes/drubo_circular_progressbar.php'; // TODO
 require dirname(__FILE__) . '/shortcodes/drubo_testimonial.php'; // TODO
+require dirname(__FILE__) . '/shortcodes/drubo_testimonial_two.php'; // TODO
 
 
 

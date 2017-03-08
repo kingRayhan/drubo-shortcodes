@@ -1,6 +1,6 @@
 <?php
 /*
- * Drubo Testimonial
+ * Drubo Testimonial two
  * Author: Hastech
  * Author URI: http://hastech.company
  * Version: 1.0.0
@@ -14,16 +14,16 @@
  * =======================================================
  */
 
-add_action('init', 'drubo_testimonial_map'); // Call kc_add_map function ///
+add_action('init', 'drubo_testimonial_two_map'); // Call kc_add_map function ///
 
-if(!function_exists('drubo_testimonial_map')):
-	function drubo_testimonial_map(){
+if(!function_exists('drubo_testimonial_two_map')):
+	function drubo_testimonial_two_map(){
 		if(function_exists('kc_add_map')): // if kingComposer is active
 		kc_add_map(
 		    array(
-		        'drubo_testimonial' => array( // <-- shortcode tag name
+		        'drubo_testimonial_two' => array( // <-- shortcode tag name
 
-		            'name' => __('Testimonial', DRUBO_SHORTCODE_TEXT_DOMAIN),
+		            'name' => __('Testimonial 2', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'description' => __('Drubo testimonial', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'icon' => 'kc-icon-progress',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
@@ -85,145 +85,144 @@ if(!function_exists('drubo_testimonial_map')):
 		                    					array(
 		                    						'property' => 'font-family', 
 		                    						'label' => 'Font Family', 
-		                    						'selector' => '+ .client-content > p'
+		                    						'selector' => '+ .client-say > p'
 		                    					),
 		                    					array( 
 		                    						'property' => 'font-size', 
 		                    						'label' => 'Font Size', 
-		                    						'selector' => '+ .client-content > p' 
+		                    						'selector' => '+ .client-say > p' 
 		                    					),
 		                    					array( 
 		                    						'property' => 'line-height', 
 		                    						'label' => 'Line height', 
-		                    						'selector' => '+ .client-content > p' 
+		                    						'selector' => '+ .client-say > p' 
 		                    					),
 		                    					array(
 		                    						'property' => 'font-weight', 
 		                    						'label' => 'Font Weight', 
-		                    						'selector' => '+ .client-content > p'
+		                    						'selector' => '+ .client-say > p'
 		                    					),
 		                    					array(
 		                    						'property' => 'text-align', 
 		                    						'label' => 'Text Align', 
-		                    						'selector' => '+ .client-content > p'
+		                    						'selector' => '+ .client-say > p'
 		                    					),
 		                    					array(
 													'property' => 'text-transform', 
 													'label' => 'Text Transform', 
-													'selector' => '+ .client-content > p'
+													'selector' => '+ .client-say > p'
 												),
 		                    					array( 
 		                    					    'property' => 'color', 
 		                    					    'label' => 'Color', 
-		                    					    'selector' => '+ .client-content > p' 
+		                    					    'selector' => '+ .client-say > p' 
 		                    					),
 		                    					array( 
 		                    					    'property' => 'margin', 
 		                    					    'label' => 'Margin', 
-		                    					    'selector' => '+ .client-content > p' 
+		                    					    'selector' => '+ .client-say > p' 
 		                    					),
 		                    				),// Testimonial text
 		                    				'Client Name'   => array(
 		                    					array(
 		                    						'property' => 'font-family', 
 		                    						'label' => 'Font Family', 
-		                    						'selector' => '+ .client-adrs > h6'
+		                    						'selector' => '+ .client-info > h6'
 		                    					),
 		                    					array( 
 		                    						'property' => 'font-size', 
 		                    						'label' => 'Font Size', 
-		                    						'selector' => '+ .client-adrs > h6' 
+		                    						'selector' => '+ .client-info > h6' 
 		                    					),
 		                    					array( 
 		                    						'property' => 'line-height', 
 		                    						'label' => 'Line height', 
-		                    						'selector' => '+ .client-adrs > h6' 
+		                    						'selector' => '+ .client-info > h6' 
 		                    					),
 		                    					array(
 		                    						'property' => 'font-weight', 
 		                    						'label' => 'Font Weight', 
-		                    						'selector' => '+ .client-adrs > h6'
+		                    						'selector' => '+ .client-info > h6'
 		                    					),
 		                    					array(
 		                    						'property' => 'text-align', 
 		                    						'label' => 'Text Align', 
-		                    						'selector' => '+ .client-adrs > h6'
+		                    						'selector' => '+ .client-info > h6'
 		                    					),
 		                    					array(
 													'property' => 'text-transform', 
 													'label' => 'Text Transform', 
-													'selector' => '+ .client-adrs > h6'
+													'selector' => '+ .client-info > h6'
 												),
 		                    					array( 
 		                    					    'property' => 'color', 
 		                    					    'label' => 'Color', 
-		                    					    'selector' => '+ .client-adrs > h6' 
+		                    					    'selector' => '+ .client-info > h6' 
 		                    					),
 		                    					array( 
 		                    					    'property' => 'margin', 
 		                    					    'label' => 'Margin', 
-		                    					    'selector' => '+ .client-adrs > h6' 
+		                    					    'selector' => '+ .client-info > h6' 
 		                    					),
 		                    				),// Client Name
 		                    				'Client Designation'   => array(
 		                    					array(
 		                    						'property' => 'font-family', 
 		                    						'label' => 'Font Family', 
-		                    						'selector' => '+ .client-adrs > p'
+		                    						'selector' => '+ .client-info > p, .client-adrs > p'
 		                    					),
 		                    					array( 
 		                    						'property' => 'font-size', 
 		                    						'label' => 'Font Size', 
-		                    						'selector' => '+ .client-adrs > p' 
+		                    						'selector' => '+ .client-info > p, .client-adrs > p' 
 		                    					),
 		                    					array( 
 		                    						'property' => 'line-height', 
 		                    						'label' => 'Line height', 
-		                    						'selector' => '+ .client-adrs > p' 
+		                    						'selector' => '+ .client-info > p, .client-adrs > p' 
 		                    					),
 		                    					array(
 		                    						'property' => 'font-weight', 
 		                    						'label' => 'Font Weight', 
-		                    						'selector' => '+ .client-adrs > p'
+		                    						'selector' => '+ .client-info > p, .client-adrs > p'
 		                    					),
 		                    					array(
 		                    						'property' => 'text-align', 
 		                    						'label' => 'Text Align', 
-		                    						'selector' => '+ .client-adrs > p'
+		                    						'selector' => '+ .client-info > p, .client-adrs > p'
 		                    					),
 		                    					array(
 		                    						'property' => 'font-style', 
 		                    						'label' => 'Font Style', 
-		                    						'selector' => '+ .client-adrs > p'
+		                    						'selector' => '+ .client-info > p, .client-adrs > p'
 		                    					),
 		                    					array(
 													'property' => 'text-transform', 
 													'label' => 'Text Transform', 
-													'selector' => '+ .client-adrs > p'
+													'selector' => '+ .client-info > p, .client-adrs > p'
 												),
 		                    					array( 
 		                    					    'property' => 'color', 
 		                    					    'label' => 'Color', 
-		                    					    'selector' => '+ .client-adrs > p' 
+		                    					    'selector' => '+ .client-info > p, .client-adrs > p' 
 		                    					),
 		                    					array( 
 		                    					    'property' => 'margin', 
 		                    					    'label' => 'Margin', 
-		                    					    'selector' => '+ .client-adrs > p' 
+		                    					    'selector' => '+ .client-info > p, .client-adrs > p' 
+		                    					),
+		                    					array( 
+		                    					    'property' => 'background-color', 
+		                    					    'label' => 'Border Botom color', 
+		                    					    'selector' => '+ .client-info > p::after' 
 		                    					),
 		                    				),// Client designation
 		                    				'Testimonial panel'   => array(
 		                    					array(
 		                    						'property' => 'background', 
 		                    						'label' => 'Testimonial Background', 
-		                    						'selector' => '+ .client-content'
+		                    						'selector' => '+ .client-testimonial-single'
 		                    					),
-		                    					array(
-		                    						'property' => 'border-radius', 
-		                    						'label' => 'Client Image border radius', 
-		                    						'selector' => '+ .client-img img'
-		                    					),
-
 		                    				),// Testimonial
 		                    			)
 		                    		) //End of options
@@ -252,7 +251,7 @@ endif;
  * =======================================================
  */
 
-function drubo_testimonial_func($atts,$content){
+function drubo_testimonial_two_func($atts,$content){
 ob_start();
         $drubo_shortcode_atts = shortcode_atts(array(
                 'testimonial' => '',
@@ -272,8 +271,8 @@ ob_start();
 
 ?>
 <div class="<?php echo $extra_class; ?> <?php echo $custom_css_class; ?>">
-				<!-- Our Client Area Start -->
-				<div class="client-carousel pt-80">
+				<!-- Testimonial Content Area Start -->
+				<div class="client-testimonial-owl pt-55">
 
 <?php foreach ($testimonial as $key => $value): 
 
@@ -281,31 +280,37 @@ ob_start();
 			$img_src = wp_get_attachment_image_src($value->client_photo , $image_size)[0];
 ?>
 
-		<!-- Client Single -->
-		<div class="our-client-single">
-			<div class="client-content text-center set-bg text-white">
-				<span>
-					<i class="fa fa-quote-right" aria-hidden="true"></i>
-				</span>
-				<p><?php echo $value->client_testimonial; ?></p>
-				<div class="client-adrs mb-35">
-					<h6><?php echo $value->client_name; ?></h6>
-					<p><?php echo $value->client_desig; ?></p>
-				</div>
-			</div>
-			<div class="client-img">
-				<img src="<?php echo $img_src; ?>" alt="" />
-			</div>
-		</div>
-		<!-- Client Single -->
+					<!-- Client Testimonial Single -->
+					<div class="client-testimonial-single bg-opacity-1">
+						<div class="ct-cp">
+							<img src="<?php echo $img_src; ?>" alt="" />
+						</div>
+						<div class="client-say text-white">
+							<p><?php echo $value->client_testimonial; ?></p>
+							<div class="client-info">
+								<h6><?php echo $value->client_name; ?></h6>
+								<p><?php echo $value->client_desig; ?></p>
+							</div>
+						</div>
+					</div>
+					<!-- Client Testimonial Single -->
 
 <?php endforeach; ?>
 
 				</div>
-				<!-- Our Client Area End -->
+				<!-- Testimonial Content Area End -->
 
 </div>
 <?php
     return ob_get_clean();
 }
-add_shortcode('drubo_testimonial','drubo_testimonial_func');
+add_shortcode('drubo_testimonial_two','drubo_testimonial_two_func');
+
+
+
+
+
+
+
+
+
