@@ -6,7 +6,15 @@
  * Version: 1.0.0
  * ======================================================
  */
- add_action('init', 'drubo_video_shortcode_map'); // Call kc_add_map function ///
+
+
+/**
+ * =======================================================
+ *    KC Shortcode Map
+ * =======================================================
+ */
+
+add_action('init', 'drubo_video_shortcode_map'); // Call kc_add_map function ///
 
 if(!function_exists('drubo_video_shortcode_map')):
 	function drubo_video_shortcode_map(){
@@ -44,7 +52,8 @@ if(!function_exists('drubo_video_shortcode_map')):
 			                array(
 			                    'name' => 'custom_css_class',
 			                    'label' => __('CSS Class',DRUBO_SHORTCODE_TEXT_DOMAIN),
-			                    'type' => 'text',
+			                    'description' => __('Custom css class for css customisation',DRUBO_SHORTCODE_TEXT_DOMAIN),
+			                    'type' => 'text'
 			                ),
 		         	), // content
 		        // .............................................
@@ -93,8 +102,8 @@ ob_start();
 	<div class="video-area">
 		<div class="img">
 			<img src="<?php 
-
-			$img_src = wp_get_attachment_image_src($preview_img)[0]; 
+			$image_size = apply_filters('','large');
+			$img_src = wp_get_attachment_image_src($preview_img , $image_size)[0]; 
 			echo $img_src;
 
 			?>" alt="">

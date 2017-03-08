@@ -6,6 +6,14 @@
  * Version: 1.0.0
  * ======================================================
  */
+
+
+/**
+ * =======================================================
+ *    KC Shortcode Map
+ * =======================================================
+ */
+
 add_action('init', 'drubo_section_title'); // Call kc_add_map function ///
 
 if(!function_exists('drubo_section_title')):

@@ -6,6 +6,14 @@
  * Version: 1.0.0
  * ======================================================
  */
+
+
+/**
+ * =======================================================
+ *    KC Shortcode Map
+ * =======================================================
+ */
+
 add_action('init', 'drubo_ourservice_map'); // Call kc_add_map function ///
 
 if(!function_exists('drubo_ourservice_map')):
@@ -36,7 +44,12 @@ if(!function_exists('drubo_ourservice_map')):
 		                    'type' => 'text',
 		                    'value' => 'Mobile App Development'
 		                ),
-
+		                array(
+		                    'name' => 'custom_css_class',
+		                    'label' => __('CSS Class',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'description' => __('Custom css class for css customisation',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'type' => 'text'
+		                ),
 		         	), // content
 		         	'Hover Content' => array(
 

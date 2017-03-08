@@ -6,6 +6,14 @@
  * Version: 1.0.0
  * ======================================================
  */
+
+
+/**
+ * =======================================================
+ *    KC Shortcode Map
+ * =======================================================
+ */
+
 add_action('init', 'drubo_shortcode_speciality_map'); // Call kc_add_map function ///
 
 if(!function_exists('drubo_shortcode_speciality_map')):
@@ -41,6 +49,12 @@ if(!function_exists('drubo_shortcode_speciality_map')):
 			                    'type' => 'textarea',
 			                    'value' => base64_encode('Lorem ipsum dolor sit amet, consectetur ish dipisicing elit, sed do eiusmod tempor lorem incididunt ut labore et .')
 			                ),
+		                array(
+		                    'name' => 'custom_css_class',
+		                    'label' => __('CSS Class',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'description' => __('Custom css class for css customisation',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'type' => 'text'
+		                ),
 		         	), // content
 		        // .............................................
 		        // ..... // Styling

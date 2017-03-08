@@ -6,6 +6,15 @@
  * Version: 1.0.0
  * ======================================================
  */
+
+
+/**
+ * =======================================================
+ *    KC Shortcode Map
+ * =======================================================
+ */
+
+
 add_action('init', 'drubo_counter_up'); // Call kc_add_map function ///
 
 if(!function_exists('drubo_counter_up')):
@@ -49,6 +58,12 @@ if(!function_exists('drubo_counter_up')):
 		                    'name' => 'icon',
 		                    'label' => __('Icon',DRUBO_SHORTCODE_TEXT_DOMAIN),
 							'type' => 'icon_picker',  // USAGE RADIO TYPE
+		                ),
+		                array(
+		                    'name' => 'custom_css_class',
+		                    'label' => __('CSS Class',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'description' => __('Custom css class for css customisation',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'type' => 'text'
 		                ),
 
 		         	), // content
