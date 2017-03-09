@@ -14,7 +14,7 @@
  * =======================================================
  */
 
- add_action('init', 'drubo_brand_slider_map'); // Call kc_add_map function ///
+add_action('init', 'drubo_brand_slider_map'); // Call kc_add_map function ///
 
 if(!function_exists('drubo_brand_slider_map')):
 	function drubo_brand_slider_map(){
@@ -34,21 +34,7 @@ if(!function_exists('drubo_brand_slider_map')):
 									'type'			=> 'group',
 									'label'			=> __('Slides', DRUBO_SHORTCODE_TEXT_DOMAIN),
 									'name'			=> 'slide',
-									'options'		=> array('add_text' => __('Add new progress bar', 'kingcomposer')),
-									// 'value' => base64_encode( json_encode(array(
-									// 	"1" => array(
-									// 		"value" => "90",
-									// 		"label" => "Development"
-									// 	),
-									// 	"2" => array(
-									// 		"value" => "80",
-									// 		"label" => "Design"
-									// 	),
-									// 	"3" => array(
-									// 		"value" => "70",
-									// 		"label" => "Marketing"
-									// 	)
-									// ) ) ),
+									'options'		=> array('add_text' => __('Add new slide', DRUBO_SHORTCODE_TEXT_DOMAIN)),
 									'params' => array(
 										array(
 											'type' => 'text',

@@ -1,12 +1,10 @@
 <?php if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access pages directly.
 /**
  * Plugin Name: Drubo Shortcodes
+ * Description: shortcodes for drubo multipurpose wordpress theme
  * Author: Hastech
  * Author URI: http://hastech.company
 */
-
-
-
 
 /**
  * TODO
@@ -14,7 +12,6 @@
  * Our Service
  * circular progressbar
  * Team Member
- * Pricing Table
  * Pricing Table 2
  * 
  */
@@ -38,8 +35,10 @@ require dirname(__FILE__) . '/shortcodes/drubo_progressbar.php';
 require dirname(__FILE__) . '/shortcodes/drubo_testimonial.php';
 require dirname(__FILE__) . '/shortcodes/drubo_testimonial_two.php'; 
 require dirname(__FILE__) . '/shortcodes/drubo_team_member.php'; //todo
-require dirname(__FILE__) . '/shortcodes/drubo_slider.php'; //todo
-require dirname(__FILE__) . '/shortcodes/drubo_pricing_table.php'; //todo
+require dirname(__FILE__) . '/shortcodes/drubo_slider.php';
+require dirname(__FILE__) . '/shortcodes/drubo_pricing_table.php';
+require dirname(__FILE__) . '/shortcodes/social_icons.php';
+require dirname(__FILE__) . '/shortcodes/drubo_team.php';
 
 
 
