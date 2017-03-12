@@ -25,7 +25,7 @@ if(!function_exists('drubo_section_title')):
 
 		            'name' => __('Section Title', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'description' => __('Description Here', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'fa-header',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 		        // .............................................
@@ -38,6 +38,7 @@ if(!function_exists('drubo_section_title')):
 		                    'name' => 'title',
 		                    'label' => __('Title',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    'type' => 'text',
+		                    'admin_label' => true,
 		                    'value' => 'Section Title'
 		                ),
 		                array(

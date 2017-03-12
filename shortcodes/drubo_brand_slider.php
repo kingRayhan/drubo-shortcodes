@@ -25,7 +25,7 @@ if(!function_exists('drubo_brand_slider_map')):
 
 		            'name' => __('Brand Slider', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'description' => __('Drubo Brand Slider', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'fa-picture-o',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 

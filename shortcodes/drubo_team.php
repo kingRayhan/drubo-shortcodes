@@ -7,7 +7,6 @@
  * ======================================================
  */
 
-
 /**
  * =======================================================
  *    KC Shortcode Map
@@ -26,7 +25,7 @@ if(!function_exists('drubo_team_member_map')):
 
 		            'name' => __('Team member', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'description' => __('Drubo pricing table', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'fa-users',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 
@@ -36,11 +35,12 @@ if(!function_exists('drubo_team_member_map')):
 		                    'name' => 'name',
 		                    'label' => __('Name',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    'type' => 'text',
+		                    'admin_label' => true,
 		                    'value' => 'King Rayhan'
 		                ),
 		                array(
 		                    'name' => 'desig',
-		                    'label' => __('Name',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'label' => __('Designation',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    'type' => 'text',
 		                    'value' => 'King Rayhan'
 		                ),

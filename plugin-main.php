@@ -34,11 +34,10 @@ require dirname(__FILE__) . '/shortcodes/drubo_progressbar.php';
 //require dirname(__FILE__) . '/shortcodes/drubo_circular_progressbar.php'; // TODO
 require dirname(__FILE__) . '/shortcodes/drubo_testimonial.php';
 require dirname(__FILE__) . '/shortcodes/drubo_testimonial_two.php'; 
-require dirname(__FILE__) . '/shortcodes/drubo_team_member.php'; //todo
-require dirname(__FILE__) . '/shortcodes/drubo_slider.php';
 require dirname(__FILE__) . '/shortcodes/drubo_pricing_table.php';
 require dirname(__FILE__) . '/shortcodes/social_icons.php';
 require dirname(__FILE__) . '/shortcodes/drubo_team.php';
+require dirname(__FILE__) . '/shortcodes/drubo_blog.php';
 
 
 
@@ -53,7 +52,3 @@ add_action('wp_head',function(){
 </style>
 	<?php
 });
-
-
-
-

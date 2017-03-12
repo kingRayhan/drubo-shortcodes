@@ -1,6 +1,6 @@
 <?php
 /*
- * Drubo Section Title ShortCode
+ * Drubo Social Icons
  * Author: Hastech
  * Author URI: http://hastech.company
  * Version: 1.0.0
@@ -24,7 +24,7 @@ if(!function_exists('drubo_social_icons_map')):
 		        'drubo_social_icons' => array( // <-- shortcode tag name
 
 		            'name' => __('Social Icons', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'fa-facebook-official',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 		        // .............................................
@@ -54,6 +54,7 @@ if(!function_exists('drubo_social_icons_map')):
 											'type' => 'text',
 											'label' => __( 'url', DRUBO_SHORTCODE_TEXT_DOMAIN ),
 											'name' => 'url',
+											'admin_label' => true
 										),
 									),
 								), // group array
