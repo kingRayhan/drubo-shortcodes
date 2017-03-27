@@ -22,9 +22,8 @@ if(!function_exists('drubo_we_work_map')):
 		    array(
 		        'drubo_we_work' => array( // <-- shortcode tag name
 
-		            'name' => __('We work', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'description' => __('Drubo We Work', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'name' => __('Work Box', DRUBO_SHORTCODE_TEXT_DOMAIN),
+		            'icon' => 'et-basket',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 

@@ -1,6 +1,6 @@
 <?php
 /*
- * Drubo Our Service
+ * Drubo Our Service 2
  * Author: Hastech
  * Author URI: http://hastech.company
  * Version: 1.0.0
@@ -14,35 +14,41 @@
  * =======================================================
  */
 
-add_action('init', 'drubo_ourservice_map'); // Call kc_add_map function ///
+add_action('init', 'drubo_ourservice_2_map'); // Call kc_add_map function ///
 
-if(!function_exists('drubo_ourservice_map')):
-	function drubo_ourservice_map(){
+if(!function_exists('drubo_ourservice_2_map')):
+	function drubo_ourservice_2_map(){
 		if(function_exists('kc_add_map')): // if kingComposer is active
 		kc_add_map(
 		    array(
-		        'drubo_our_service' => array( // <-- shortcode tag name
+		        'drubo_shortcode_ourservoces_two' => array( // <-- shortcode tag name
 
-		            'name' => __('Our Service', DRUBO_SHORTCODE_TEXT_DOMAIN),
+		            'name' => __('Drubo Services', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'description' => __('Drubo Ourservice', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'et-lightbulb',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 
 
-		         	'Front Content' => array(
+		         	'Content' => array(
 
 		                array(
-		                    'name' => 'front_icon',
-		                    'label' => __('Icon',DRUBO_SHORTCODE_TEXT_DOMAIN),
-		                    'type' => 'icon_picker',
-		                    'value' => 'fa-mobile'
-		                ),
-		                array(
-		                    'name' => 'front_title',
+		                    'name' => 'title',
 		                    'label' => __('Title',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    'type' => 'text',
-		                    'value' => 'Mobile App Development'
+		                    'value' => 'GRAPHIC DESIGN'
+		                ),
+		                array(
+		                    'name' => 'desc',
+		                    'label' => __('Description',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'type' => 'textarea',
+		                    'value' => base64_encode('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standdummy text ever since the 1500s,')
+		                ),
+		                array(
+		                    'name' => 'icon',
+		                    'label' => __('Icon',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'type' => 'icon_picker',
+		                    'value' => 'fa-paint-brush'
 		                ),
 		                array(
 		                    'name' => 'custom_css_class',
@@ -51,30 +57,7 @@ if(!function_exists('drubo_ourservice_map')):
 		                    'type' => 'text'
 		                ),
 		         	), // content
-		         	'Hover Content' => array(
 
-		                array(
-		                    'name' => 'hover_icon',
-		                    'label' => __('Icon',DRUBO_SHORTCODE_TEXT_DOMAIN),
-		                    'type' => 'icon_picker',
-		                    'value' => 'fa-mobile'
-		                ),
-		                array(
-		                    'name' => 'hover_title',
-		                    'label' => __('Title',DRUBO_SHORTCODE_TEXT_DOMAIN),
-		                    'type' => 'text',
-		                    'value' => 'GRAPHIC DESIGN'
-		                ),
-		                array(
-		                    'name' => 'hover_desc',
-		                    'label' => __('Description',DRUBO_SHORTCODE_TEXT_DOMAIN),
-		                    'type' => 'text',
-		                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipisicings, eli sed do eiusmod tempor incididunt ut labore et dolor magna aliqua. Ut enim ad minim
-
-'
-		                ),
-
-		         	), // content
 		        // .............................................
 		        // ..... // Styling
 		        // .............................................
@@ -85,91 +68,102 @@ if(!function_exists('drubo_ourservice_map')):
 		                    		'options' => array(
 		                    			array(
 		                    				'screens' => 'any,1024,999,767,479',
-		                    				'Counter Value'   => array(
-		                    					array(
-		                    						'property' => 'font-family', 
-		                    						'label' => 'Font Family', 
-		                    						'selector' => '+ .sucs-count h3 span'
-		                    					),
-		                    					array( 
-		                    						'property' => 'font-size', 
-		                    						'label' => 'Font Size', 
-		                    						'selector' => '+ .sucs-count h3 span' 
-		                    					),
-		                    					array(
-		                    						'property' => 'font-weight', 
-		                    						'label' => 'Font Weight', 
-		                    						'selector' => '+ .sucs-count h3 span'
-		                    					),
-		                    					array(
-		                    						'property' => 'text-align', 
-		                    						'label' => 'Text Align', 
-		                    						'selector' => '+ .sucs-count h3 span'
-		                    					),
-		                    					array(
-													'property' => 'text-transform', 
-													'label' => 'Text Transform', 
-													'selector' => '+ .sucs-count h3 span'
-												),
-		                    					array( 
-		                    					    'property' => 'color', 
-		                    					    'label' => 'Color', 
-		                    					    'selector' => '+ .sucs-count h3 span' 
-		                    					),
-		                    				),
 		                    				'Title'   => array(
 		                    					array(
 		                    						'property' => 'font-family', 
 		                    						'label' => 'Font Family', 
-		                    						'selector' => '+ .sucs-count h3'
+		                    						'selector' => '+ .srvc-content > h6'
 		                    					),
 		                    					array( 
 		                    						'property' => 'font-size', 
 		                    						'label' => 'Font Size', 
-		                    						'selector' => '+ .sucs-count h3' 
+		                    						'selector' => '+ .srvc-content > h6' 
 		                    					),
 		                    					array(
 		                    						'property' => 'font-weight', 
 		                    						'label' => 'Font Weight', 
-		                    						'selector' => '+ .sucs-count h3'
+		                    						'selector' => '+ .srvc-content > h6'
 		                    					),
 		                    					array(
 		                    						'property' => 'text-align', 
 		                    						'label' => 'Text Align', 
-		                    						'selector' => '+ .sucs-count h3'
+		                    						'selector' => '+ .srvc-content > h6'
 		                    					),
 		                    					array(
 													'property' => 'text-transform', 
 													'label' => 'Text Transform', 
-													'selector' => '+ .sucs-count h3'
+													'selector' => '+ .srvc-content > h6'
 												),
 		                    					array( 
 		                    					    'property' => 'color', 
 		                    					    'label' => 'Color', 
-		                    					    'selector' => '+ .sucs-count h3' 
+		                    					    'selector' => '+ .srvc-content > h6' 
+		                    					),
+		                    					array( 
+		                    					    'property' => 'color', 
+		                    					    'label' => 'Hover Color', 
+		                    					    'selector' => '+ .specialty-single:hover .icon-titel h6, .ourservice-single:hover .srvc-content h6' 
+		                    					),
+		                    				),
+		                    				'Description'   => array(
+		                    					array(
+		                    						'property' => 'font-family', 
+		                    						'label' => 'Font Family', 
+		                    						'selector' => '+ .srvc-content > p'
+		                    					),
+		                    					array( 
+		                    						'property' => 'font-size', 
+		                    						'label' => 'Font Size', 
+		                    						'selector' => '+ .srvc-content > p' 
+		                    					),
+		                    					array(
+		                    						'property' => 'font-weight', 
+		                    						'label' => 'Font Weight', 
+		                    						'selector' => '+ .srvc-content > p'
+		                    					),
+		                    					array(
+		                    						'property' => 'line-height', 
+		                    						'label' => 'Line height', 
+		                    						'selector' => '+ .srvc-content > p'
+		                    					),
+		                    					array(
+		                    						'property' => 'text-align', 
+		                    						'label' => 'Text Align', 
+		                    						'selector' => '+ .srvc-content > p'
+		                    					),
+		                    					array(
+													'property' => 'text-transform', 
+													'label' => 'Text Transform', 
+													'selector' => '+ .srvc-content > p'
+												),
+		                    					array( 
+		                    					    'property' => 'color', 
+		                    					    'label' => 'Color', 
+		                    					    'selector' => '+ .srvc-content > p' 
 		                    					),
 		                    				),
 		                    				'Icon'   => array(
 		                    					array(
 		                    						'property' => 'color', 
 		                    						'label' => 'Icon color', 
-		                    						'selector' => '+ .sucs-icon a i'
+		                    						'selector' => '+ .ourservice-single a i'
 		                    					),
 		                    					array( 
 		                    						'property' => 'background-color', 
 		                    						'label' => 'Icon Backgrount Color', 
-		                    						'selector' => '+ .sucs-icon a' 
+		                    						'selector' => '+ .ourservice-single a' 
 		                    					),
 		                    					array(
 		                    						'property' => 'background-color', 
 		                    						'label' => 'Icon Hover Background color', 
-		                    						'selector' => '+ .successful-single:hover .sucs-icon a'
+		                    						'selector' => '+ .specialty-single:hover .icon-titel i::after, .social-rotate ul li a:hover, .ourservice-single:hover .srvc-icon a'
 		                    					),
 		                    					array(
 		                    						'property' => 'color', 
 		                    						'label' => 'Hover Icon color', 
-		                    						'selector' => '+ .successful-single:hover .sucs-icon a i'
+		                    						'selector' => '+ .specialty-single:hover .icon-titel i, .ourservice-single:hover .srvc-icon a i'
 		                    					),
+
 		                    				),
 
 		                    				
@@ -206,17 +200,12 @@ endif;
  * =======================================================
  */
 
-
-function drubo_our_service_func($atts,$content){
-ob_start();
+function drubo_shortcode_ourservoces_two_func($atts,$content){
+    ob_start();
         $drubo_shortcode_atts = shortcode_atts(array(
-        	// Front
-                'front_title' => '',
-                'front_icon' => '',
-            // Hover
-                'hover_title' => '',
-                'hover_icon' => '',
-                'hover_desc' => '',
+                'title' => '',
+                'desc' => '',
+                'icon' => '',
             // css
                 'custom_css' => '',
                 'custom_css_class' => '',
@@ -231,25 +220,17 @@ ob_start();
 	$extra_class =  implode( ' ', $wrap_class );	
 ?>
 <div class="<?php echo $extra_class; ?> <?php echo $custom_css_class; ?>">
-	<div class="service-single text-center mb-30">
-		<div class="srvc-icon pb-30">
-			<i class="front-icon <?php echo $front_icon; ?>"></i>
-		</div>
-		<div class="srvc-titel">
-			<h6 class="front-title"><?php echo $front_title; ?></h6>
-		</div>
-		<div class="service-hover text-center">
-			<div class="hvr-icon">
-				<i class="hover-icon <?php echo $hover_icon; ?>" aria-hidden="true"></i>
-				<h6 class="hover-title"><?php echo $hover_title; ?></h6>
-				<p class="hover-desc"><?php echo $hover_desc ?></p>
-			</div>
-		</div>
-	</div>
+    <div class="ourservice-single text-center">
+        <div class="srvc-icon mb-40">
+            <a href="#"><i class="<?php echo $icon; ?>" aria-hidden="true"></i></a>
+        </div>
+        <div class="srvc-content">
+            <h6><?php echo $title; ?></h6>
+            <p><?php echo $desc; ?></p>
+        </div>
+    </div>
 </div>
-
-
 <?php
     return ob_get_clean();
 }
-add_shortcode('drubo_our_service','drubo_our_service_func');
+add_shortcode('drubo_shortcode_ourservoces_two','drubo_shortcode_ourservoces_two_func');

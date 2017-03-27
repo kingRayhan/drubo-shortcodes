@@ -24,8 +24,7 @@ if(!function_exists('drubo_video_shortcode_map')):
 		        'drubo_video_shortcode' => array( // <-- shortcode tag name
 
 		            'name' => __('Video', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'description' => __('Drubo Speciality', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'sl-control-play',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 

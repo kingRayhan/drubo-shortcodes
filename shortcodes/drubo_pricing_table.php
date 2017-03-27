@@ -26,7 +26,7 @@ if(!function_exists('drubo_pricing_table_map')):
 
 		            'name' => __('Pricing Table', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'description' => __('Drubo pricing table', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'fa-dollar',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 

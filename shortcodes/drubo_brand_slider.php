@@ -24,8 +24,7 @@ if(!function_exists('drubo_brand_slider_map')):
 		        'drubo_brand_slider' => array( // <-- shortcode tag name
 
 		            'name' => __('Brand Slider', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'description' => __('Drubo Brand Slider', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'fa-picture-o',
+		            'icon' => 'et-pictures',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 

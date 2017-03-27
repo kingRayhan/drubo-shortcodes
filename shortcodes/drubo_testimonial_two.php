@@ -25,7 +25,7 @@ if(!function_exists('drubo_testimonial_two_map')):
 
 		            'name' => __('Testimonial 2', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'description' => __('Drubo testimonial', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'fa-comments-o',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 
@@ -34,7 +34,7 @@ if(!function_exists('drubo_testimonial_two_map')):
 									'type'			=> 'group',
 									'label'			=> __('Testimonials', DRUBO_SHORTCODE_TEXT_DOMAIN),
 									'name'			=> 'testimonial',
-									'options'		=> array('add_text' => __('Add new progress bar', 'kingcomposer')),
+									'options'		=> array('add_text' => __('Add new', DRUBO_SHORTCODE_TEXT_DOMAIN)),
 									'value' => base64_encode( json_encode(array(
 										"1" => array(
 											"client_name" => "PHOTOSHOP",

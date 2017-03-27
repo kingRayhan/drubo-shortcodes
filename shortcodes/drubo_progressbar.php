@@ -25,7 +25,7 @@ if(!function_exists('drubo_progressbar_map')):
 
 		            'name' => __('Progressbar', DRUBO_SHORTCODE_TEXT_DOMAIN),
 		            'description' => __('Drubo progressbar', DRUBO_SHORTCODE_TEXT_DOMAIN),
-		            'icon' => 'kc-icon-progress',
+		            'icon' => 'et-bargraph',
 		            'category' => DRUBO_SHORTCODE_CATEGORY,
 		            'params' => array(
 
