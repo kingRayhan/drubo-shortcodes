@@ -5,9 +5,7 @@
  * Author URI: http://hastech.company
  * Version: 1.0.0
  */
-
 add_action('init', 'drubo_google_map', 99 );
-
 if ( !function_exists('drubo_google_map')) {
 
 	function drubo_google_map(){
@@ -126,7 +124,7 @@ function drubo_google_map_shortcode( $atts, $content = null ){
 		  var marker = new google.maps.Marker({
 			position: map.getCenter(),
 			animation:google.maps.Animation.BOUNCE,
-			icon: '<?php echo $marker_icon[0]; ?>',
+			icon: '<?php echo isset($marker_icon[0]) ? $marker_icon[0] : plugins_url( 'assets/map-icon.png', dirname(__FILE__) ); ?>',
 			map: map
 		  });
 

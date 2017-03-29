@@ -55,6 +55,40 @@ if(!function_exists('drubo_video_shortcode_map')):
 			                    'type' => 'text'
 			                ),
 		         	), // content
+                            'styling' => array(
+		                    	array(
+		                    		'name' => 'custom_css',
+		                    		'type' => 'css',
+		                    		'options' => array(
+		                    			array(
+		                    				'screens' => 'any,1024,999,767,479',
+		                    				'Icon' => array(
+												array(
+													'property' => 'color', 
+													'label' => 'Icon Color', 
+													'selector' => '+ .video-shortcode i'
+												),
+												array(
+													'property' => 'color', 
+													'label' => 'Icon Hover Color', 
+													'selector' => '+ .video-shortcode i:hover'
+												),
+											),
+
+
+									
+		                    			)
+		                    		) //End of options
+		                    	)
+
+		                    ), //End of styling
+		                    
+                            'animate' => array(
+								array(
+									'name'    => 'animate',
+									'type'    => 'animate'
+								)
+							), //End of animate
 		        // .............................................
 		        // .............................................
 		        // .............................................
@@ -96,16 +130,15 @@ ob_start();
 	 	$wrap_class[] = $custom_class;
     endif;
 	$extra_class =  implode( ' ', $wrap_class );	
+
+
+	$image_size = apply_filters('','large');
+	$img_src = wp_get_attachment_image_src($preview_img , $image_size)[0]; 
 ?>
 <div class="<?php echo $extra_class; ?> <?php echo $custom_css_class; ?>">
-	<div class="video-area">
+	<div class="video-area video-shortcode">
 		<div class="img">
-			<img src="<?php 
-			$image_size = apply_filters('','large');
-			$img_src = wp_get_attachment_image_src($preview_img , $image_size)[0]; 
-			echo $img_src;
-
-			?>" alt="">
+			<img src="<?php echo $img_src; ?>">
 			<a href="<?php echo $video_url; ?>" class="popup-youtube">
 				<i class="<?php echo $icon; ?>"></i>
 			</a>
