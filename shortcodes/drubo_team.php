@@ -42,7 +42,7 @@ if(!function_exists('drubo_team_member_map')):
 		                    'name' => 'desig',
 		                    'label' => __('Designation',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    'type' => 'text',
-		                    'value' => 'King Rayhan'
+		                    'value' => 'Wordpress Developer'
 		                ),
 						array(
 							'type' => 'attach_image',
@@ -197,16 +197,6 @@ if(!function_exists('drubo_team_member_map')):
 		                    					    'selector' => '+ .desig' 
 		                    					),
 		                    				),
-
-
-		                    				'Panel'   => array(
-		                    					array(
-		                    						'property' => 'background', 
-		                    						'label' => 'Panel Background', 
-		                    						'selector' => '+ .pricing-table-single'
-		                    					),
-
-		                    				),
 		                    				
 		                    			)
 		                    		) //End of options
@@ -270,7 +260,7 @@ ob_start();
 ?>
 <div class="<?php echo $extra_class; ?> <?php echo $custom_css_class; ?>">
 	<div class="team-single">
-		<img src="<?php echo $img_src; ?>">
+		<img style="width:100%;" src="<?php echo $img_src; ?>">
 		<div class="team-details text-center">
 			<div class="team-adrs pt-120">
 				<h5 class="name"><?php echo $name; ?></h5>
