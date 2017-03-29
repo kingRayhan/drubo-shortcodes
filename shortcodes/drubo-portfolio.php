@@ -5,15 +5,10 @@
  * Author URI: http://hastech.company
  * Version: 1.0.0
  */
-
 add_action('init', 'drubo_portfolio', 99 );
-
 if ( !function_exists('drubo_portfolio')) {
-
 	function drubo_portfolio(){
-
 		if (function_exists('kc_add_map')) { 
-
 		    kc_add_map(
 		        array(
 		            'drubo_portfolio' => array(
@@ -216,8 +211,7 @@ function drubo_portfolio_shortcode( $atts, $content = null ){
 	</div>
 
     
-	<!-- Latest Shot/Portfolio Menu Tab -->
-    <!-- Latest Shot/Portfolio Menu Tab -->
+
 	<div class="grid img-full portfolio-box">
             <?php 
             	while( $portfolio->have_posts() ): $portfolio->the_post();
@@ -268,7 +262,6 @@ function drubo_portfolio_shortcode( $atts, $content = null ){
 				</div>
 				<!-- Latest Shot/Portfolio Single -->
 			</div>
-
             <?php else: ?>
             <div class="grid-sizer grid-item <?php echo $portfolio_cat_class; ?>">
 				<!-- Latest Shot/Portfolio Single -->
@@ -277,7 +270,7 @@ function drubo_portfolio_shortcode( $atts, $content = null ){
 						<?php 
 						if( has_post_thumbnail() ):
 							the_post_thumbnail('portfolio_small');
-						endif; 
+						endif;
 						?>
 						<?php 
 						$portfolio_medium = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'portfolio_medium');
@@ -299,10 +292,11 @@ function drubo_portfolio_shortcode( $atts, $content = null ){
 	<div class="container">
 	<div class="row">
 	<div class="col-md-12">
-	<div class="pagination-count text-center broder ptb-15 mt-60 white-bg">
+	<div class="text-center ptb-15 mt-60 white-bg">
 	<?php
 	    if( function_exists('drubo_pagination') ):
-            drubo_pagination($portfolio->max_num_pages);
+	    	drubo_pagination($args['query'] = $portfolio);
+            //wp_pagenavi(array( 'query' =>  ));
         endif;
     ?>
     </div>
