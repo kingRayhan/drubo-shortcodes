@@ -59,17 +59,31 @@ Example: <strong>24/7</strong> Support',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    'type' => 'textarea',
 		                    'value' => base64_encode("250 MB storage\r\n100 email forwards\r\n200 My sqi datebase\r\n50 social account\r\n24/7 support")
 		                ),
+	                    array(
+							'name'	=> 'show_button',
+							'label'	=> __( 'Display Button', DRUBO_SHORTCODE_TEXT_DOMAIN ),
+							'type'	=> 'toggle',
+							'value'	=> 'yes',
+						),
 		                array(
 		                    'name' => 'button_text',
 		                    'label' => __('Button Text',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    'type' => 'text',
-		                    'value' => 'Order now'
+		                    'value' => 'Order now',
+	                        'relation'	=> array(
+								'parent'	=> 'show_button',
+								'show_when'	=> 'yes'
+							),
 		                ),
 		                array(
 		                    'name' => 'button_link',
 		                    'label' => __('Button Link',DRUBO_SHORTCODE_TEXT_DOMAIN),
-		                    'type' => 'text',
-		                    'value' => '#'
+		                    'type' => 'link',
+		                    'value' => '#',
+	                        'relation'	=> array(
+								'parent'	=> 'show_button',
+								'show_when'	=> 'yes'
+							),
 		                ),
 		                array(
 		                    'name' => 'custom_css_class',
@@ -157,11 +171,6 @@ Example: <strong>24/7</strong> Support',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    						'selector' => '+ .table-category h1'
 		                    					),
 		                    					array(
-													'property' => 'text-transform', 
-													'label' => 'Text Transform', 
-													'selector' => '+ .table-category h1'
-												),
-		                    					array(
 													'property' => 'margin', 
 													'label' => 'Margin', 
 													'selector' => '+ .table-category h1'
@@ -191,11 +200,6 @@ Example: <strong>24/7</strong> Support',DRUBO_SHORTCODE_TEXT_DOMAIN),
 		                    					array(
 		                    						'property' => 'font-weight', 
 		                    						'label' => 'Font Weight', 
-		                    						'selector' => '+ .table-category h1 span'
-		                    					),
-		                    					array(
-		                    						'property' => 'text-align', 
-		                    						'label' => 'Text Align', 
 		                    						'selector' => '+ .table-category h1 span'
 		                    					),
 		                    					array(
@@ -344,6 +348,7 @@ ob_start();
                 'price' => '',
                 'per_month' => '',
                 'pricing_table_attributes' => '',
+                'show_button' => '',
                 'button_text' => '',
                 'button_link' => '',
             // css
@@ -377,9 +382,11 @@ ob_start();
 			<?php endforeach; endif;?>
 			</ul>
 		</div>
+		<?php if ($show_button) :?>
 		<div class="order-button text-uppercase text-center">
 			<a href="<?php echo $button_link; ?>"><?php echo $button_text; ?></a>
 		</div>
+		<?php endif; ?>
 	</div>
 </div>
 <?php

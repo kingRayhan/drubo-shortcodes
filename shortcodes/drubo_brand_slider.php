@@ -36,7 +36,7 @@ if(!function_exists('drubo_brand_slider_map')):
 									'options'		=> array('add_text' => __('Add new slide', DRUBO_SHORTCODE_TEXT_DOMAIN)),
 									'params' => array(
 										array(
-											'type' => 'text',
+											'type' => 'link',
 											'label' => __( 'Slide target URL', DRUBO_SHORTCODE_TEXT_DOMAIN ),
 											'name' => 'url',
 										),

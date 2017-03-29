@@ -5,9 +5,7 @@
  * Author URI: http://hastech.company
  * Version: 1.0.0
  */
-
 add_action('init', 'drubo_pricing', 99 );
-
 if ( !function_exists('drubo_pricing')) {
 
 	function drubo_pricing(){
@@ -25,29 +23,29 @@ if ( !function_exists('drubo_pricing')) {
 		                    'general' => array(
 		                    	array(
 			                        'name' => 'pricing_title',
-			                        'label' => __( 'Pricing Package Name', 'drubo'),
+			                        'label' => __( 'Pricing Package Name', DRUBO_SHORTCODE_TEXT_DOMAIN),
 			                        'type' => 'text',
-			                        'value' => 'Text Title',
+			                        'value' => 'SILVER PACK',
 			                        'admin_label' => true,
-			                        'description' => __( 'Write your pricing package name here.', 'drubo' ),
+			                        'description' => __( 'Write your pricing package name here.', DRUBO_SHORTCODE_TEXT_DOMAIN),
 			                    ),
 			                    array(
 			                        'name' => 'currency_sign',
 			                        'label' => __('Currency Sign', 'drubo'),
 			                        'type' => 'text',
 			                        'value' => '$',
-			                        'description' => __( 'Write your currency sign here.', 'drubo' ),
+			                        'description' => __( 'Write your currency sign here.', DRUBO_SHORTCODE_TEXT_DOMAIN ),
 			                    ),
 			                    array(
 			                        'name' => 'price',
-			                        'label' => __('Price', 'drubo'),
+			                        'label' => __('Price', DRUBO_SHORTCODE_TEXT_DOMAIN),
 			                        'type' => 'text',
 			                        'value' => '56',
-			                        'description' => __( 'Write your pricing package price here.', 'drubo' ),
+			                        'description' => __( 'Write your pricing package price here.', DRUBO_SHORTCODE_TEXT_DOMAIN ),
 			                    ),
 			                    array(
 			                        'name' => 'duration',
-			                        'label' => __('Per', 'drubo'),
+			                        'label' => __('Per', DRUBO_SHORTCODE_TEXT_DOMAIN),
 			                        'type' => 'text',
 			                        'value' => '/month',
 			                    ),
@@ -56,17 +54,17 @@ if ( !function_exists('drubo_pricing')) {
 			                        'label' => __('Attributes', 'drubo'),
 			                        'type' => 'textarea',
 			                        'description'	=> __( 'Insert tag &lt;strong&gt; when you want highlight text.<br> Example: &lt;strong&gt;<strong>24/7</strong>&lt;/strong&gt; Support', 'drubo' ),
-			                        'value'			=> '',
+			                        'value' => base64_encode("250 MB storage\r\n100 email forwards\r\n200 My sqi datebase\r\n50 social account\r\n24/7 support")
 			                    ),
 			                    array(
 									'name'	=> 'show_icon',
-									'label'	=> __( 'Show Icon Attributes', 'drubo' ),
+									'label'	=> __( 'Show Icon Attributes', DRUBO_SHORTCODE_TEXT_DOMAIN ),
 									'type'	=> 'toggle',
 									'value'	=> 'yes'
 								),
 								array(
 									'name'			=> 'icon_name',
-									'label'			=> __( 'Icon Attributes', 'drubo' ),
+									'label'			=> __( 'Icon Attributes', DRUBO_SHORTCODE_TEXT_DOMAIN ),
 									'type'			=> 'icon_picker',
 									'value'			=> 'fa-check',
 									'relation'		=> array(
@@ -76,13 +74,13 @@ if ( !function_exists('drubo_pricing')) {
 								),
 			                    array(
 									'name'	=> 'show_button',
-									'label'	=> __( 'Display Button', 'drubo' ),
+									'label'	=> __( 'Display Button', DRUBO_SHORTCODE_TEXT_DOMAIN ),
 									'type'	=> 'toggle',
 									'value'	=> 'yes',
 								),
 			                    array(
 			                        'name' => 'price_btn_text',
-			                        'label' => __('Button Text', 'value'),
+			                        'label' => __('Button Text', DRUBO_SHORTCODE_TEXT_DOMAIN),
 			                        'type' => 'text',
 			                        'value' => 'Order Now',
 			                        'relation'	=> array(
@@ -92,7 +90,7 @@ if ( !function_exists('drubo_pricing')) {
 			                    ),
 			                    array(
 			                        'name' => 'price_btn_link',
-			                        'label' => __('Button Link', 'drubo'),
+			                        'label' => __('Button Link', DRUBO_SHORTCODE_TEXT_DOMAIN),
 			                        'type' => 'link',
 			                        'value' => '#',
 			                        'relation'	=> array(
@@ -104,7 +102,7 @@ if ( !function_exists('drubo_pricing')) {
 			                        'name' => 'custom_class',
 			                        'label' => 'Class',
 			                        'type' => 'text',
-			                        'description' => __( 'Extra CSS class', 'drubo' ),
+			                        'description' => __( 'Extra CSS class', DRUBO_SHORTCODE_TEXT_DOMAIN ),
 			                    ),
 		                    ), //End of general
                             'styling' => array(
@@ -115,16 +113,21 @@ if ( !function_exists('drubo_pricing')) {
 		                    			array(
 		                    				'screens' => 'any,1024,999,767,479',
 		                    				'Title' => array(
-												array('property' => 'color', 'label' => 'Title Color', 'selector' => '+ .pricing-table-single.two h6'),
-												array('property' => 'color', 'label' => 'Title Color Hover', 'selector' => '+:hover .pricing-table-single.two h6'),
-												array('property' => 'font-family', 'label' => 'Title Font Family', 'selector' => '+ .pricing-table-single.two h6'),
-												array('property' => 'font-size', 'label' => 'Title Font Size', 'selector' => '+ .pricing-table-single.two h6'),
-												array('property' => 'font-weight', 'label' => 'Title Font Weight', 'selector' => '+ .pricing-table-single.two h6'),
-												array('property' => 'line-height', 'label' => 'Title Line Height', 'selector' => '+ .pricing-table-single.two h6'),
-												array('property' => 'text-transform', 'label' => 'Title Text Transform', 'selector' => '+ .pricing-table-single.two h6'),
-												array('property' => 'text-align', 'label' => 'Title Text Align', 'selector' => '+ .pricing-table-single.two h6'),
-												array('property' => 'margin', 'label' => 'Title Margin', 'selector' => '+ .pricing-table-single.two h6'),
-												array('property' => 'padding', 'label' => 'Title Padding', 'selector' => '+ .pricing-table-single.two h6'),
+												array(
+													'property' => 'color', 
+													'label' => 'Title Color', 
+													'selector' => '+ .table-title'
+												),
+												array('property' => 'color', 'label' => 'Title Color Hover', 
+													'selector' => '+ .table-title'),
+												array('property' => 'font-family', 'label' => 'Title Font Family', 'selector' => '+ .table-title'),
+												array('property' => 'font-size', 'label' => 'Title Font Size', 'selector' => '+ .table-title'),
+												array('property' => 'font-weight', 'label' => 'Title Font Weight', 'selector' => '+ .table-title'),
+												array('property' => 'line-height', 'label' => 'Title Line Height', 'selector' => '+ .table-title'),
+												array('property' => 'text-transform', 'label' => 'Title Text Transform', 'selector' => '+ .table-title'),
+												array('property' => 'text-align', 'label' => 'Title Text Align', 'selector' => '+ .table-title'),
+												array('property' => 'margin', 'label' => 'Title Margin', 'selector' => '+ .table-title'),
+												array('property' => 'padding', 'label' => 'Title Padding', 'selector' => '+ .table-title'),
 											),
 					                    	'Price' => array(
 												array('property' => 'color', 'label' => 'Color', 'selector' => '+ .price-category h1'),
@@ -179,9 +182,7 @@ if ( !function_exists('drubo_pricing')) {
 												array('property' => 'background-color', 'label' => 'Outer BG Color', 'selector' => '+.pricing-table-single'),
 												array('property' => 'background-color', 'label' => 'Outer BG Color Hover', 'selector' => '+:hover'),
 												array('property' => 'background-color', 'label' => 'Inner BG Color', 'selector' => '+ .table-content'),
-												array('property' => 'background-color', 'label' => 'Inner BG Color  Hover', 'selector' => '+:hover .table-content'),
-												array('property' => 'box-shadow', 'label' => 'Box Shadow', 'selector' => '+ .table-content'),
-												array('property' => 'box-shadow', 'label' => 'Box Shadow Hover', 'selector' => '+:hover .table-content'),
+												array('property' => 'background-color', 'label' => 'Inner BG Color  Hover', 'selector' => '+:hover .table-content')
 											),
 		                    				
 		                    			)
@@ -240,7 +241,7 @@ function drubo_pricing_shortcode( $atts, $content = null ){
 	$html  = '';
 	$html .= '<div class="pricing-table-single set-bg two '.$extra_class.'">';
 	if( !empty($pricing_title) ):
-	$html .= '<h6>'.$pricing_title.'</h6>';
+	$html .= '<h6 class="table-title">'.$pricing_title.'</h6>';
     endif;
 	$html .= '<div class="table-content">';
 	$html .= '<div class="price-category">';

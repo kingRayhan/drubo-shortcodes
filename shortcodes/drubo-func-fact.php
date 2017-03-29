@@ -44,7 +44,7 @@ if(!function_exists('drubo_counter_up')):
 
 		                array(
 		                    'name' => 'count',
-		                    'label' => __('Title',DRUBO_SHORTCODE_TEXT_DOMAIN),
+		                    'label' => __('Counter',DRUBO_SHORTCODE_TEXT_DOMAIN),
 							'type' => 'number_slider',  // USAGE RADIO TYPE
 							'options' => array(    // REQUIRED
 								'min' => 0,
