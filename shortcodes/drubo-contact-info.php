@@ -5,9 +5,7 @@
  * Author URI: http://hastech.company
  * Version: 1.0.0
  */
-
 add_action('init', 'drubo_contact_info', 99 );
-
 if ( !function_exists('drubo_contact_info')) {
 
 	function drubo_contact_info(){
@@ -83,8 +81,7 @@ if ( !function_exists('drubo_contact_info')) {
 												array('property' => 'line-height', 'label' => 'Line Height', 'selector' => '+.adrs-details ul li a'),
 												array('property' => 'border', 'label' => 'Border', 'selector' => '+.adrs-details ul li a'),
 												array('property' => 'border-color', 'label' => 'Border Hover Color', 'selector' => '+.adrs-details ul li:hover a'),
-												array('property' => 'border-radius', 'label' => 'Border Radius', 'selector' => '+.adrs-details ul li a'),
-												array('property' => 'border-radius', 'label' => 'Border Radius Hover', 'selector' => '+.adrs-details ul li:hover a'),
+												array('property' => 'border-radius', 'label' => 'Border Radius', 'selector' => '+.adrs-details ul li a')
 											),
 											'Desc' => array(
 												array('property' => 'color', 'label' => 'Color', 'selector' => '+.adrs-details p'),
@@ -148,7 +145,7 @@ function drubo_contact_info_shortcode( $atts, $content = null ){
 	if( !empty($contact_options) ):
     	foreach ( $contact_options as $contact ) :
 	$html .= '<li><a href="#"><i class="'.$contact->iconName.'"></i></a>
-	         <p>'.$contact->content.'</p>
+	         <p style="padding-right:0;">'.$contact->content.'</p>
 			 </li>';
         endforeach;
     endif;
