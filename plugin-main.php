@@ -6,17 +6,6 @@
  * Author URI: http://hastech.company
 */
 
-/**
- * TODO
- * --------------------------------
- * Our Service
- * circular progressbar
- * Team Member
- * Pricing Table 2
- * 
- */
-
-
 
 
 define('DRUBO_SHORTCODE_CATEGORY', 'Drubo Shortcodes');
@@ -37,13 +26,12 @@ require dirname(__FILE__) . '/shortcodes/drubo_pricing_table_2.php';
 require dirname(__FILE__) . '/shortcodes/social_icons.php';
 require dirname(__FILE__) . '/shortcodes/drubo_team.php';
 require dirname(__FILE__) . '/shortcodes/drubo_blog.php';
-require dirname(__FILE__) . '/shortcodes/drubo-portfolio.php';
 require dirname(__FILE__) . '/shortcodes/drubo-portfolio-content.php';
 require dirname(__FILE__) . '/shortcodes/drubo-button.php';
-//require dirname(__FILE__) . '/shortcodes/drubo-contact-form.php'; // TODO
 require dirname(__FILE__) . '/shortcodes/drubo-google-map.php';
 require dirname(__FILE__) . '/shortcodes/drubo-tabs.php';
 require dirname(__FILE__) . '/shortcodes/drubo-contact-info.php';
+require dirname(__FILE__) . '/shortcodes/contact-form-7.php';
 
 
 
