@@ -11,9 +11,9 @@ add_action('init', 'drubo_contact_form', 99 );
 if ( !function_exists('drubo_contact_form')) {
 
 	function drubo_contact_form(){
-		$contact_forms = kc_tools::get_cf7_names();
+		
 		if (function_exists('kc_add_map')) { 
-
+			$contact_forms = kc_tools::get_cf7_names();
 		    kc_add_map(
 		        array(
 		            'drubo_contact_form' => array(
